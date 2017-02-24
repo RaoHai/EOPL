@@ -53,7 +53,7 @@
         data-chapter-title="exercise-1.1"
         data-filepath="chapter-1 - Inductive Sets of Data/exercise-1.1.md"
         data-basepath=".."
-        data-revision="Fri Feb 24 2017 18:06:39 GMT+0800 (CST)"
+        data-revision="Fri Feb 24 2017 18:07:29 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -180,102 +180,102 @@ in all three styles (top-down, bottom-up, and rules of inference). Using your
 rules, show the derivation of some sample elements of each set.</p>
 </blockquote>
 <ol>
-<li><p><img src="../_mathjax_9e56fe43.svg"></p>
-<p><img src="../_mathjax_8e19708e.svg"> </p>
+<li><p><script type="math/tex; "> \{ 3n + 2 | n \in N \}</script></p>
+<p><script type="math/tex; "> \{ 3n + 2 | n \in N \} = \{2, 5, 8, 11, ....\} </script> </p>
 <ul>
 <li>dop-down:
 A nature number is in S if and only if<ol>
-<li><img src="../_mathjax_4dfcb5e9.svg">, or </li>
-<li><img src="../_mathjax_a17a6f48.svg"></li>
+<li><script type="math/tex; "> n = 2 </script>, or </li>
+<li><script type="math/tex; "> n - 3 \in S </script></li>
 </ol>
 </li>
 <li><p>bottom-up:
 The set S is the smallest set contained in N and 
 satisfying the following conditions:</p>
 <ol>
-<li><img src="../_mathjax_3b5e36b6.svg">, and</li>
-<li>if <img src="../_mathjax_df2bb575.svg">, then <img src="../_mathjax_dfef9356.svg"></li>
+<li><script type="math/tex; ">2 \in S</script>, and</li>
+<li>if <script type="math/tex; ">n \in S</script>, then <script type="math/tex; ">n + 3 \in S</script></li>
 </ol>
 </li>
 <li><p>rules of inference:</p>
 <ul>
-<li><img src="../_mathjax_b2912de.svg"></li>
+<li><script type="math/tex; "> \frac{}{2 \in S} , \frac{n \in S}{ n + 3 \in S} </script></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><img src="../_mathjax_d95d782c.svg"> </p>
-<p> <img src="../_mathjax_8f1378ab.svg"> </p>
+<li><p><script type="math/tex; "> \{2n + 3m + 1 | n, m \in N\} </script> </p>
+<p> <script type="math/tex; "> \{ 2n + 3m + 1 | n \in N \} = \{1, 3, 4, 5, 7, 8, ...\} </script> </p>
 <ul>
 <li><p>top-down:
 A nature number is in S if and only if</p>
 <ol>
 <li>n = 1, or</li>
-<li><img src="../_mathjax_6dd06fd6.svg">, or</li>
-<li><img src="../_mathjax_a17a6f48.svg">.</li>
+<li><script type="math/tex; "> n - 2 \in S </script>, or</li>
+<li><script type="math/tex; "> n - 3 \in S </script>.</li>
 </ol>
 </li>
 <li><p>bottom-up:
 The set S is the smallest set contained in N and 
 satisfying the following conditions:</p>
 <ol>
-<li><img src="../_mathjax_4400c94d.svg">, and</li>
-<li>if <img src="../_mathjax_c8062827.svg">, then <img src="../_mathjax_799898e2.svg">.</li>
-<li>if <img src="../_mathjax_c8062827.svg">, then <img src="../_mathjax_79408933.svg">.</li>
+<li><script type="math/tex; "> 1 \in S </script>, and</li>
+<li>if <script type="math/tex; "> n \in S </script>, then <script type="math/tex; ">n + 2 \in S</script>.</li>
+<li>if <script type="math/tex; "> n \in S </script>, then <script type="math/tex; ">mn + 3 \in S</script>.</li>
 </ol>
 </li>
 <li><p>rules of inference:</p>
 <ol>
-<li><img src="../_mathjax_845a25b5.svg"></li>
+<li><script type="math/tex; ">\frac{}{1 \in S}, \frac{ n \in S}{ n + 2 \in S}, \frac{ n \in S}{ n + 3 \in sample}</script></li>
 </ol>
 </li>
 </ul>
 </li>
-<li><p><img src="../_mathjax_fc5d311b.svg"></p>
-<p> <img src="../_mathjax_ad8a298a.svg"></p>
+<li><p><script type="math/tex; "> {(n, 2n+1) | n \in N} </script></p>
+<p> <script type="math/tex; "> \{(n, 2n+1) | n \in N\} = \{(0, 0), (1, 3), (3, 5), ...\}</script></p>
 <ul>
 <li><p>top-down:
 A pair of nature number (n, m) is in S if and only if</p>
 <ul>
 <li>(n, m) = (0, 1), or</li>
-<li><img src="../_mathjax_4fa848be.svg">.</li>
+<li><script type="math/tex; ">(n-1, m-2) \in S</script>.</li>
 </ul>
 </li>
 <li><p>bottom-top:
 The set S is the smallest set contained in N and<br>satisfying the following conditions</p>
 <ol>
-<li><img src="../_mathjax_94bc100c.svg">, and</li>
-<li>if <img src="../_mathjax_ff00e824.svg">, then <img src="../_mathjax_cf87f290.svg">.</li>
+<li><script type="math/tex; "> (0, 1) \in S </script>, and</li>
+<li>if <script type="math/tex; "> (n, m) \in S</script>, then <script type="math/tex; "> (n+1, m+2) \in S</script>.</li>
 </ol>
 </li>
 <li><p>rules of inference:</p>
 <ol>
-<li><img src="../_mathjax_1ed3da38.svg"></li>
+<li><script type="math/tex; ">\frac{}{(0, 1) \in S}, \frac{(n, m) \in S}{(n+1,m+2)\in S}</script></li>
 </ol>
 </li>
 </ul>
 </li>
 </ol>
 <ol>
-<li><p><img src="../_mathjax_8a6007a6.svg">  Do not mention squaring in your rules. as a hint, 
-remember the quation <img src="../_mathjax_c16a1899.svg"></p>
-<p><img src="../_mathjax_941be04.svg"> </p>
+<li><p><script type="math/tex; ">\{(n, n^2) | n \in N\}</script>  Do not mention squaring in your rules. as a hint, 
+remember the quation <script type="math/tex; ">(n + 1)^2= n^2 + 2n + 1</script></p>
+<p><script type="math/tex; ">\{(n, n^2) | n \in N\} = {(0, 0), (1, 1), (2, 4), ...}</script> </p>
 <ul>
 <li>top-down:
 A pair of nature number (n, m) is in S if and only if</li>
 <li>(n, m) = (0, 0), or</li>
-<li><p><img src="../_mathjax_92b31a56.svg"></p>
+<li><p><script type="math/tex; ">(n-1, m-2n+1) \in S</script></p>
 </li>
 <li><p>bottom-up
 The set S is the smallest set contained in N and
 satisfying the following conditions:</p>
 </li>
-<li><img src="../_mathjax_83c7044f.svg">, and</li>
-<li><p>if <img src="../_mathjax_d5902b7c.svg">, then <img src="../_mathjax_3e086ca2.svg"></p>
+<li><script type="math/tex; "> (0, 0) \in S </script>, and</li>
+<li><p>if <script type="math/tex; "> (n, m) \in S </script>, then <script type="math/tex; "> (n+1, m + 2n + 1) \in S </script></p>
 </li>
 <li><p>rules of inference</p>
 </li>
-<li><img src="../_mathjax_6fa01663.svg"></li>
+<li><script type="math/tex; ">\frac{}{(n,m) \in S}, \frac{(n,m) \in S}{(n+1, m+2n+1) \in S}</script></li>
 </ul>
 </li>
 </ol>
@@ -326,7 +326,7 @@ satisfying the following conditions:</p>
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"mathjax":{"forceSVG":true},"mathjax-beta":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"mathjax-beta":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"mathjax":{}};
     gitbook.start(config);
 });
 </script>
