@@ -1,0 +1,8 @@
+{
+    "plugins": ["mathjax-beta"],
+    "pluginsConfig": {
+        "mathjax":{
+            "forceSVG": true
+        }
+    }
+}
