@@ -1,0 +1,13 @@
+{
+  "name": "eopl-notes-and-exercise",
+  "version": "0.0.1",
+  "description": "Notes and Exercises of EOPL 3rd edition",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2"
+  },
+  "scripts": {
+    "pub": "gitbook build && gulp"
+  }
+}
