@@ -27,5 +27,3 @@
     (eopl:error `nth-element "List ~s does not have ~s elements." lst (+ n 1))
   )
 )
-
-(display (nth-element `(a b c d) 8))
