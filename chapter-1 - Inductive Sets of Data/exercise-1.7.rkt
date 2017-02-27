@@ -5,7 +5,7 @@
 ; such as “(a b c) does not have 8 elements.”
 (define nth-element
   (lambda (lst n)
-    (nth-element-r lst n (report-list-too-sort lst n))
+    (nth-element-r lst n (lambda () (report-list-too-sort lst n)))
   )
 )
 
@@ -15,7 +15,7 @@
       (error)
       (if (zero? n)
         (car lst)
-        (nth-element-r (cdr lst) (- n 1))
+        (nth-element-r (cdr lst) (- n 1) error)
       )
     )
    )
@@ -27,3 +27,5 @@
     (eopl:error `nth-element "List ~s does not have ~s elements." lst (+ n 1))
   )
 )
+
+(display (nth-element `(a b c d) 5))

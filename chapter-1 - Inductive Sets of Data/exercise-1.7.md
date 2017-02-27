@@ -8,7 +8,7 @@ Exercise 1.7
 
 (define nth-element
   (lambda (lst n)
-    (nth-element-r lst n (report-list-too-sort lst n))
+    (nth-element-r lst n (lambda () (report-list-too-sort lst n)))
   )
 )
 
@@ -18,7 +18,7 @@ Exercise 1.7
       (error)
       (if (zero? n)
         (car lst)
-        (nth-element-r (cdr lst) (- n 1))
+        (nth-element-r (cdr lst) (- n 1) error)
       )
     )
    )
@@ -30,6 +30,7 @@ Exercise 1.7
     (eopl:error `nth-element "List ~s does not have ~s elements." lst (+ n 1))
   )
 )
+
 
 
 ```
