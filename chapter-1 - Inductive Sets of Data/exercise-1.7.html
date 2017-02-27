@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>exercise-1.5 | ESSENTIALS OF PROGRAMMING LANGUAGES</title>
+        <title>exercise-1.7 | ESSENTIALS OF PROGRAMMING LANGUAGES</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../chapter-1 - Inductive Sets of Data/exercise-1.6.html" />
     
-    
-    <link rel="prev" href="../chapter-1 - Inductive Sets of Data/exercise-1.4.html" />
+    <link rel="prev" href="../chapter-1 - Inductive Sets of Data/exercise-1.6.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1.6"
-        data-chapter-title="exercise-1.5"
-        data-filepath="chapter-1 - Inductive Sets of Data/exercise-1.5.md"
+        data-level="1.8"
+        data-chapter-title="exercise-1.7"
+        data-filepath="chapter-1 - Inductive Sets of Data/exercise-1.7.md"
         data-basepath=".."
         data-revision="Mon Feb 27 2017 19:02:34 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -165,7 +163,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="chapter-1 - Inductive Sets of Data/exercise-1.5.html">
+        <li class="chapter " data-level="1.6" data-path="chapter-1 - Inductive Sets of Data/exercise-1.5.html">
             
                 
                     <a href="../chapter-1 - Inductive Sets of Data/exercise-1.5.html">
@@ -195,7 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="chapter-1 - Inductive Sets of Data/exercise-1.7.html">
+        <li class="chapter active" data-level="1.8" data-path="chapter-1 - Inductive Sets of Data/exercise-1.7.html">
             
                 
                     <a href="../chapter-1 - Inductive Sets of Data/exercise-1.7.html">
@@ -248,26 +246,38 @@
                 
                     <section class="normal" id="section-">
                     
-                        <p>Exercise 1.5:</p>
+                        <p>Exercise 1.7</p>
 <blockquote>
-<p>Prove that if <script type="math/tex; ">e \in LcExp</script>, then there are the same number of left and
-right parentheses in e.</p>
+<p>The error message from nth-element is uninformative. 
+Rewrite nth-element so that it produces a more informative error message, 
+such as &#x201C;(a b c) does not have 8 elements.&#x201D;</p>
 </blockquote>
-<p>Follow <code>Proof by Structural Induction</code></p>
-<p>The Proposition IH(l,r) is that an expression that any expression with l left parentheses and r right parentheses, l = r.</p>
-<ol>
-<li><p>IH(l, r) holds trivially if e is an Identifier, IH(0, 0).</p>
-</li>
-<li><p>An expression have k numbers of left parentheses and m numbers of parentheses holds, that is , IH(k, m) holds, 
-that IH(k+1, m+1) also hold.</p>
-</li>
-</ol>
-<p>if LcExp := (lambda (expression) LcExp),
-then k = 1 + 1 + IH(k-1) = IH(m-1) + 1 + 1 = m 
-IH(k-1) = IH(m-1), k = m, IH(k,m) holds,</p>
-<p>if LcExp := (LcExp1, LcExp2), has k+1 numbers of left parentheses, m+1 numbers of parentheses.
-LcExp1, LcExp2 must have (k, m) parentheses both, witch is IH(k, m) holds.</p>
-<p>Q.E.D. </p>
+<pre><code class="lang-scheme">
+<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span> nth-element
+  <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">lambda</span></span> <span class="hljs-list">(<span class="hljs-keyword">lst</span> n)</span>
+    <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> lst n <span class="hljs-list">(<span class="hljs-keyword">report-list-too-sort</span> lst n)</span>)</span>
+  )</span>
+)</span>
+
+<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span> nth-element-r
+  <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">lambda</span></span> <span class="hljs-list">(<span class="hljs-keyword">lst</span> n error)</span>
+    <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">if</span></span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">null?</span></span> lst)</span>
+      <span class="hljs-list">(<span class="hljs-keyword">error</span>)</span>
+      <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">if</span></span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">zero?</span></span> n)</span>
+        <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">car</span></span> lst)</span>
+        <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">cdr</span></span> lst)</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">-</span></span> n <span class="hljs-number">1</span>)</span>)</span>
+      )</span>
+    )</span>
+   )</span>
+ )</span>
+
+
+<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span> report-list-too-sort
+  <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">lambda</span></span> <span class="hljs-list">(<span class="hljs-keyword">lst</span> n)</span>
+    <span class="hljs-list">(<span class="hljs-keyword">eopl:error</span> `nth-element <span class="hljs-string">&quot;List ~s does not have ~s elements.&quot;</span> lst <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">+</span></span> n <span class="hljs-number">1</span>)</span>)</span>
+  )</span>
+)</span>
+</code></pre>
 
                     
                     </section>
@@ -278,10 +288,8 @@ LcExp1, LcExp2 must have (k, m) parentheses both, witch is IH(k, m) holds.</p>
         </div>
 
         
-        <a href="../chapter-1 - Inductive Sets of Data/exercise-1.4.html" class="navigation navigation-prev " aria-label="Previous page: exercise-1.4"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter-1 - Inductive Sets of Data/exercise-1.6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: exercise-1.6"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../chapter-1 - Inductive Sets of Data/exercise-1.6.html" class="navigation navigation-next " aria-label="Next page: exercise-1.6"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
