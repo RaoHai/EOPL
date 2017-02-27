@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>notes | ESSENTIALS OF PROGRAMMING LANGUAGES</title>
+        <title>exercise-1.5 | ESSENTIALS OF PROGRAMMING LANGUAGES</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,8 @@
         
     
     
-    <link rel="next" href="../chapter-1 - Inductive Sets of Data/exercise-1.1.html" />
     
-    
-    <link rel="prev" href="../index.html" />
+    <link rel="prev" href="../chapter-1 - Inductive Sets of Data/exercise-1.4.html" />
     
 
         
@@ -49,9 +47,9 @@
         
         
     <div class="book"
-        data-level="1.1"
-        data-chapter-title="notes"
-        data-filepath="chapter-1 - Inductive Sets of Data/notes.md"
+        data-level="1.6"
+        data-chapter-title="exercise-1.5"
+        data-filepath="chapter-1 - Inductive Sets of Data/exercise-1.5.md"
         data-basepath=".."
         data-revision="Mon Feb 27 2017 13:39:54 GMT+0800 (CST)"
         data-innerlanguage="">
@@ -90,7 +88,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.1" data-path="chapter-1 - Inductive Sets of Data/notes.html">
+        <li class="chapter " data-level="1.1" data-path="chapter-1 - Inductive Sets of Data/notes.html">
             
                 
                     <a href="../chapter-1 - Inductive Sets of Data/notes.html">
@@ -165,7 +163,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="chapter-1 - Inductive Sets of Data/exercise-1.5.html">
+        <li class="chapter active" data-level="1.6" data-path="chapter-1 - Inductive Sets of Data/exercise-1.5.html">
             
                 
                     <a href="../chapter-1 - Inductive Sets of Data/exercise-1.5.html">
@@ -218,18 +216,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h3 id="inductive-sets-of-data">Inductive Sets of Data</h3>
-<ul>
-<li>1.1 Recursively Specified Data<ul>
-<li>1.1.1 Inductive Specification<ul>
-<li>rule: a natura number n is in S if and only if 
-the statement can be derived from the axioms by using the rules of 
-inference finitely many times.</li>
-</ul>
+                        <p>Exercise 1.5:</p>
+<blockquote>
+<p>Prove that if <script type="math/tex; ">e \in LcExp</script>, then there are the same number of left and
+right parentheses in e.</p>
+</blockquote>
+<p>Follow <code>Proof by Structural Induction</code></p>
+<p>The Proposition IH(l,r) is that an expression that any expression with l left parentheses and r right parentheses, l = r.</p>
+<ol>
+<li><p>IH(l, r) holds trivially if e is an Identifier, IH(0, 0).</p>
 </li>
-</ul>
+<li><p>An expression have k numbers of left parentheses and m numbers of parentheses holds, that is , IH(k, m) holds, 
+that IH(k+1, m+1) also hold.</p>
 </li>
-</ul>
+</ol>
+<p>if LcExp := (lambda (expression) LcExp),
+then k = 1 + 1 + IH(k-1) = IH(m-1) + 1 + 1 = m 
+IH(k-1) = IH(m-1), k = m, IH(k,m) holds,</p>
+<p>if LcExp := (LcExp1, LcExp2), has k+1 numbers of left parentheses, m+1 numbers of parentheses.
+LcExp1, LcExp2 must have (k, m) parentheses both, witch is IH(k, m) holds.</p>
+<p>Q.E.D. </p>
 
                     
                     </section>
@@ -240,10 +246,8 @@ inference finitely many times.</li>
         </div>
 
         
-        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Introduction"><i class="fa fa-angle-left"></i></a>
+        <a href="../chapter-1 - Inductive Sets of Data/exercise-1.4.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: exercise-1.4"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../chapter-1 - Inductive Sets of Data/exercise-1.1.html" class="navigation navigation-next " aria-label="Next page: exercise-1.1"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
