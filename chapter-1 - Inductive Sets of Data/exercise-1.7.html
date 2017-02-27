@@ -51,7 +51,7 @@
         data-chapter-title="exercise-1.7"
         data-filepath="chapter-1 - Inductive Sets of Data/exercise-1.7.md"
         data-basepath=".."
-        data-revision="Mon Feb 27 2017 19:02:34 GMT+0800 (CST)"
+        data-revision="Mon Feb 27 2017 19:14:51 GMT+0800 (CST)"
         data-innerlanguage="">
     
 
@@ -255,7 +255,7 @@ such as &#x201C;(a b c) does not have 8 elements.&#x201D;</p>
 <pre><code class="lang-scheme">
 <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span> nth-element
   <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">lambda</span></span> <span class="hljs-list">(<span class="hljs-keyword">lst</span> n)</span>
-    <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> lst n <span class="hljs-list">(<span class="hljs-keyword">report-list-too-sort</span> lst n)</span>)</span>
+    <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> lst n <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">lambda</span></span> <span class="hljs-list">()</span> <span class="hljs-list">(<span class="hljs-keyword">report-list-too-sort</span> lst n)</span>)</span>)</span>
   )</span>
 )</span>
 
@@ -265,7 +265,7 @@ such as &#x201C;(a b c) does not have 8 elements.&#x201D;</p>
       <span class="hljs-list">(<span class="hljs-keyword">error</span>)</span>
       <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">if</span></span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">zero?</span></span> n)</span>
         <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">car</span></span> lst)</span>
-        <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">cdr</span></span> lst)</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">-</span></span> n <span class="hljs-number">1</span>)</span>)</span>
+        <span class="hljs-list">(<span class="hljs-keyword">nth-element-r</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">cdr</span></span> lst)</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">-</span></span> n <span class="hljs-number">1</span>)</span> error)</span>
       )</span>
     )</span>
    )</span>
