@@ -11,3 +11,7 @@
  * [exercise-1.7](chapter-1 - Inductive Sets of Data/markdown/1.7.md)
  * [exercise-1.8](chapter-1 - Inductive Sets of Data/markdown/1.8.md)
  * [exercise-1.9](chapter-1 - Inductive Sets of Data/markdown/1.9.md)
+ * [exercise-1.10](chapter-1 - Inductive Sets of Data/markdown/1.10.md)
+ * [exercise-1.11](chapter-1 - Inductive Sets of Data/markdown/1.11.md)
+ * [exercise-1.12](chapter-1 - Inductive Sets of Data/markdown/1.12.md)
+ * [exercise-1.13](chapter-1 - Inductive Sets of Data/markdown/1.13.md)
